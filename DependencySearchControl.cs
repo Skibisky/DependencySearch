@@ -28,7 +28,6 @@ namespace DependencySearch {
 			cbRequest.Items.Add("RetrieveDependentComponentsRequest");
 
 			btnExecute.Enabled = false;
-
 			this.WorkAsync(new WorkAsyncInfo("Getting types...", (a) => {
 				var comptypes = GetOptionSetValue("componenttype");
 				ComponentTypes.AddRange(comptypes.Options.OrderBy(o => o.Label.LocalizedLabels.First().Label).Select(osv => new OptionSetLabel() {
